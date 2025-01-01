@@ -1,0 +1,107 @@
+$azul: rgb(6, 139, 191);
+
+@mixin mi-h2() {
+  font-family: 'Montserrat', 'Georgia', serif;
+  text-align: left;
+  font-size: 22px;
+  color: $azul;
+  text-transform: uppercase;
+  line-height: 0.211;
+}
+@mixin mi-texto($font-color:#454545) {
+  font-family: 'Roboto', Arial, sans-serif;
+  text-align: left;
+  font-size: 1.2rem;
+  color: $font-color;
+  @media (min-width: 500px) {
+    font-size: 1.5rem;
+  }
+}
+
+
+.main-main {
+  @include seccion-base(fit-content, 0px);
+}
+
+//seccion hero
+.main-main-hero {
+  @include seccion-base(100vh, 15px);
+  position: relative;
+  max-height: 1000px;
+  background-image: url('/assets/img/hero1.jpg');
+  background-size: cover;
+  background-position-x: -150px;
+  background-repeat: no-repeat;
+
+  //leyenda
+  &__leyenda {
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    .descripcion {
+      color: white;
+      font-size: 12px;
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.2;
+    }
+    .datos {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: white;
+      font-size: 35px;
+      font-family: 'Montserrat', 'Georgia', serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 0.912;
+    }
+  }
+}
+
+//=====================
+//quienes
+.main-main-quienes {
+  @include seccion-base(fit-content, 40px);
+  @include mi-texto();
+  h1 {
+    margin-bottom: 40px;
+    font-family: 'Montserrat', 'Georgia', serif;
+    text-align: center;
+    font-size: 30px;
+    color: $azul;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 3px rgba(29, 23, 23, 0.5);
+  }
+  &-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    h2 {
+      @include mi-h2();
+      margin-bottom: 15px;
+    }
+    .boton-contacto {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.main-footer {
+  @include seccion-base();
+  @include mi-texto(white);
+  background-color: #202020;
+  &-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}

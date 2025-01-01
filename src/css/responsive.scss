@@ -1,0 +1,52 @@
+@media (min-width: 500px) {
+
+  .main-main-hero {
+    background-position-x: -100px;
+    &__leyenda {
+      width: 300px;
+      .descripcion {
+        font-size: 18px;
+      }
+      .datos {
+        font-size: 45px;
+      }
+      .boton-contacto {
+        font-size: 18px;
+        height: 50px;
+        width: 160px;
+      }
+    }
+  }
+
+
+  .main-main-quienes {
+    h1 {
+      font-size: 35px;
+      margin-bottom: 50px;
+    }
+    &-content {
+      h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+      .boton-contacto {
+        font-size: 18px;
+        height: 50px;
+        width: 160px;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .main-main-hero {
+    background-position: center;
+    max-height: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-main-quienes-content {
+    width: 920px;
+  }
+}

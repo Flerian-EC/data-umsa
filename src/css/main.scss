@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 10px
+}
+body {
+  position: relative;
+}
+
+
+//elelemtnos 100% ancho 
+@mixin seccion-base($mi-height:fit-content, $mi-padding-block: 40px) {
+  width: 100%;
+  height: $mi-height;
+  padding-top: $mi-padding-block;
+  padding-bottom: $mi-padding-block;
+}
+
+@import "./header.scss";
+@import "./seccions.scss";
+@import "./responsive.scss";
+
+//=============================
+//BOTON contacto
+.boton-contacto {
+  box-shadow: 0 2px 5px 1px #1d171780;
+  width: 130px;
+  height: 40px;
+  background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Roboto','Lato', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+     //box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),7px 7px 20px 0px rgba(0,0,0,.1),4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .boton-contacto span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .boton-contacto:before,
+  .boton-contacto:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgba(255,151,0,1);
+    //box-shadow:-7px -7px 20px 0px rgba(255,255,255,.9),-4px -4px 5px 0px rgba(255,255,255,.9),7px 7px 20px 0px rgba(0,0,0,.2),4px 4px 5px 0px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+  }
+  .boton-contacto:before{
+     height: 0%;
+     width: 2px;
+  }
+  .boton-contacto:after {
+    width: 0%;
+    height: 2px;
+  }
+  .boton-contacto:hover{
+    color: rgba(255,151,0,1);
+    background: transparent;
+  }
+  .boton-contacto:hover:before {
+    height: 100%;
+  }
+  .boton-contacto:hover:after {
+    width: 100%;
+  }
+  .boton-contacto span:before,
+  .boton-contacto span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(255,151,0,1);
+    //box-shadow:-7px -7px 20px 0px rgba(255,255,255,.9),-4px -4px 5px 0px rgba(255,255,255,.9),7px 7px 20px 0px rgba(0,0,0,.2),4px 4px 5px 0px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+  }
+  .boton-contacto span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .boton-contacto span:after {
+    height: 2px;
+    width: 0%;
+  }
+  .boton-contacto span:hover:before {
+    height: 100%;
+  }
+  .boton-contacto span:hover:after {
+    width: 100%;
+  }
+
+
+
+//==========================
+//fonts:
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat/AnyConv.com__Montserrat-Black.woff2') format('woff2');
+  font-weight: 900; /* Black */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat/AnyConv.com__Montserrat-BlackItalic.woff2') format('woff2');
+  font-weight: 900; /* Black */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat/AnyConv.com__Montserrat-Bold.woff2') format('woff2');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat/AnyConv.com__Montserrat-BoldItalic.woff2') format('woff2');
+  font-weight: 700; /* Bold */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat/AnyConv.com__Montserrat-Medium.woff2') format('woff2');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat/AnyConv.com__Montserrat-MediumItalic.woff2') format('woff2');
+  font-weight: 500; /* Medium */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat/AnyConv.com__Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Carga de la fuente Roboto */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/AnyConv.com__Roboto-Black.woff2') format('woff2');
+  font-weight: 900; /* Black */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/AnyConv.com__Roboto-BlackItalic.woff2') format('woff2');
+  font-weight: 900; /* Black */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/AnyConv.com__Roboto-Bold.woff2') format('woff2');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/AnyConv.com__Roboto-BoldItalic.woff2') format('woff2');
+  font-weight: 700; /* Bold */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/AnyConv.com__Roboto-Medium.woff2') format('woff2');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/AnyConv.com__Roboto-MediumItalic.woff2') format('woff2');
+  font-weight: 500; /* Medium */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/AnyConv.com__Roboto-Regular.woff2') format('woff2');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
